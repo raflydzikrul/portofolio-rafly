@@ -116,35 +116,19 @@ const PROFILE = {
   // ============================================================
   portfolio: [
     {
-      title: "Poster Promosi Rumah Tahfidz",
+      title: "Sistem Setoran Hafalan Siswa",
       description:
-        "Desain poster untuk kebutuhan promosi program dan kegiatan Rumah Tahfidz Center.",
-      image: "assets/portfolio/placeholder-1.svg",
-      tags: ["Desain Grafis"],
-      link: "",
+        "Mencatat seluruh data setoran harian siswa dan Absensi Guru Pembimbing",
+      image: "assets/portfolio/setor-hafalan.png",
+      tags: ["Setoran Hafalan"],
+      link: "https://setoran-hafalan.netlify.app/",
     },
     {
-      title: "Konten Media Sosial",
+      title: "Aplikasi Tanya Jawab Ustadz",
       description:
-        "Perencanaan dan pembuatan konten media sosial untuk mendukung promosi program lembaga.",
+        "Memfasilitasi dan memudahkan umat dalam mengatasi kebingungan tentang agama",
       image: "assets/portfolio/placeholder-2.svg",
-      tags: ["Content Creation", "Sosial Media"],
-      link: "",
-    },
-    {
-      title: "Sistem Pencatatan Database Santri",
-      description:
-        "Penyusunan dan pengelolaan database santri agar rapi, mudah dicari, dan mudah diperbarui.",
-      image: "assets/portfolio/placeholder-3.svg",
-      tags: ["Administrasi", "Database"],
-      link: "",
-    },
-    {
-      title: "Sistem Pencatatan Database Santri",
-      description:
-        "Penyusunan dan pengelolaan database santri agar rapi, mudah dicari, dan mudah diperbarui.",
-      image: "assets/portfolio/placeholder-3.svg",
-      tags: ["Administrasi", "Database"],
+      tags: ["Q&A", "Muslim Update"],
       link: "",
     },
     {
