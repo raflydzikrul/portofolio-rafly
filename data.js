@@ -28,14 +28,14 @@ const PROFILE = {
   whatsapp: "6285892736804",
 
   // Ganti dengan foto asli kamu. Taruh file di folder assets/ lalu ubah nama di bawah ini.
-  photo: "assets/profile-photo.svg", // ganti ke assets/profile-photo.jpg setelah upload foto asli
+  photo: "assets/profile.jpeg", // ganti ke assets/profile-photo.jpg setelah upload foto asli
 
   // Kalau mau tombol "Unduh CV" aktif, taruh file CV (pdf/docx) di folder assets/
   // lalu isi nama filenya di sini. Kosongkan ("") kalau belum ada.
-  cvFile: "assets/CV_Rafly_Dzikrul_Hakim.pdf",
+  cvFile: "assets/CV Rafly Dzikrul Hakim.pdf",
 
   about:
-    "Lulusan S1 Sistem Informasi dengan pengalaman lebih dari 3 tahun di bidang administrasi, customer service, dan pembinaan/pendampingan. Terbiasa melayani pelanggan, mengelola database, menyusun dokumen resmi, membuat konten media sosial, dan mendesain materi visual. Kini fokus mengembangkan karier di bidang layanan perbankan sebagai Service Advisor — dengan modal komunikasi yang tenang, kedisiplinan tinggi, dan kebiasaan menjaga amanah, termasuk sebagai penghafal Al-Qur'an 10 juz.",
+    "Lulusan S1 Sistem Informasi dengan pengalaman lebih dari 2 tahun di bidang administrasi, customer service, dan pembinaan/pendampingan. Terbiasa melayani pelanggan, mengelola database, menyusun dokumen resmi, membuat konten media sosial, dan mendesain materi visual. Kini fokus mengembangkan karier di bidang layanan perbankan sebagai Service Advisor — dengan modal komunikasi yang tenang, kedisiplinan tinggi, dan kebiasaan menjaga amanah, termasuk sebagai penghafal Al-Qur'an 10 juz.",
 
   experience: [
     {
@@ -87,17 +87,17 @@ const PROFILE = {
     {
       title: "Junior Office Operator",
       issuer: "LSP Informatika",
-      year: "",
+      year: "Tahun 2024",
     },
     {
       title: "Kompetensi Bidang Pendidikan Al-Qur'an",
       issuer: "SKK",
-      year: "",
+      year: "Tahun 2024",
     },
     {
-      title: "Sertifikasi MikroTIK",
+      title: "Pelatihan dan Sertifikasi MikroTIK",
       issuer: "Hendevance Training Partner (HTP)",
-      year: "",
+      year: "Tahun 2025",
     },
   ],
 
@@ -126,23 +126,23 @@ const PROFILE = {
     {
       title: "Aplikasi Tanya Jawab Ustadz",
       description:
-        "Memfasilitasi dan memudahkan umat dalam mengatasi kebingungan tentang agama",
-      image: "assets/portfolio/placeholder-2.svg",
+        "Memfasilitasi dan memudahkan umat dalam bertanya dan berkonsultasi dengan Asatidz yang terpercaya",
+      image: "assets/portfolio/contoh.svg",
       tags: ["Q&A", "Muslim Update"],
       link: "",
     },
     {
-      title: "Sistem Pencatatan Database Santri",
+      title: "Sistem Absensi Karyawan",
       description:
-        "Penyusunan dan pengelolaan database santri agar rapi, mudah dicari, dan mudah diperbarui.",
-      image: "assets/portfolio/placeholder-3.svg",
-      tags: ["Administrasi", "Database"],
+        "Sistem Absensi Karyawan dengan menggunakan fitur foto dan melacak lokasi absen barada",
+      image: "assets/portfolio/sistem-absensi.png",
+      tags: ["Absensi", "Database"],
       link: "",
     },
   ],
 
   social: {
     linkedin: "",
-    instagram: "",
+    instagram: "https://www.instagram.com/raflyydzi/",
   },
 };
