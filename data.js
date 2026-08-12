@@ -127,7 +127,7 @@ const PROFILE = {
       title: "Sistem Absensi Kegiatan dan Kedisiplinan Siswa",
       description:
         "Sistem Absensi Kegiatan siswa dan catatan pelanggaran kedisiplinan siswa",
-      image: "assets/portfolio/sistem-absensi-kedispilinan.png",
+      image: "assets/portfolio/absensi-kedispilinan.png",
       tags: ["Absensi", "Database", "Kedispilinan"],
       link: "https://asrama-icms.vercel.app/",
     },
