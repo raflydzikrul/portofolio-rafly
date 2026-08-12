@@ -121,15 +121,15 @@ const PROFILE = {
         "Mencatat seluruh data setoran harian siswa dan Absensi Guru Pembimbing",
       image: "assets/portfolio/setor-hafalan.png",
       tags: ["Setoran Hafalan"],
-      link: "https://setoran-hafalan.netlify.app/",
+      link: "https://setoran-hafalan-icms.vercel.app/",
     },
     {
-      title: "Aplikasi Tanya Jawab Ustadz",
+      title: "Sistem Absensi Kegiatan dan Kedisiplinan Siswa",
       description:
-        "Memfasilitasi dan memudahkan umat dalam bertanya dan berkonsultasi dengan Asatidz yang terpercaya",
-      image: "assets/portfolio/contoh.svg",
-      tags: ["Q&A", "Muslim Update"],
-      link: "",
+        "Sistem Absensi Kegiatan siswa dan catatan pelanggaran kedisiplinan siswa",
+      image: "assets/portfolio/sistem-absensi-kedispilinan.png",
+      tags: ["Absensi", "Database", "Kedispilinan"],
+      link: "https://asrama-icms.vercel.app/",
     },
     {
       title: "Sistem Absensi Karyawan",
@@ -137,6 +137,14 @@ const PROFILE = {
         "Sistem Absensi Karyawan dengan menggunakan fitur foto dan melacak lokasi absen barada",
       image: "assets/portfolio/sistem-absensi.png",
       tags: ["Absensi", "Database"],
+      link: "",
+    },
+    {
+      title: "Aplikasi Tanya Jawab Ustadz",
+      description:
+        "Memfasilitasi dan memudahkan umat dalam bertanya dan berkonsultasi dengan Asatidz yang terpercaya",
+      image: "assets/portfolio/contoh.svg",
+      tags: ["Q&A", "Muslim Update"],
       link: "",
     },
   ],
