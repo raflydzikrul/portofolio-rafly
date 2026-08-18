@@ -139,14 +139,7 @@
 
   // --- Generic slider: prev/next buttons + dots + auto show/hide ---
   // Dipakai untuk Portofolio dan Sertifikasi (bisa dipakai ulang untuk section lain juga)
-  function initSlider({
-    grid,
-    prevBtn,
-    nextBtn,
-    dotsWrap,
-    cardSelector,
-    itemCount,
-  }) {
+  function initSlider({ grid, prevBtn, nextBtn, dotsWrap, cardSelector, itemCount }) {
     if (!grid || !prevBtn || !nextBtn || !dotsWrap) return;
 
     function cardStep() {
@@ -172,7 +165,7 @@
       const dots = dotsWrap.querySelectorAll(".slider-dot");
       if (dots.length) {
         const index = Math.round(
-          (grid.scrollLeft / Math.max(maxScroll, 1)) * (dots.length - 1),
+          (grid.scrollLeft / Math.max(maxScroll, 1)) * (dots.length - 1)
         );
         dots.forEach((d, i) => d.classList.toggle("active", i === index));
       }
@@ -242,7 +235,7 @@
     a.addEventListener("click", () => {
       mainNav.classList.remove("open");
       navToggle.setAttribute("aria-expanded", "false");
-    }),
+    })
   );
 
   // ---------- SCROLL REVEAL ----------
@@ -257,7 +250,7 @@
           }
         });
       },
-      { threshold: 0.15 },
+      { threshold: 0.15 }
     );
     revealEls.forEach((el) => io.observe(el));
 
@@ -271,7 +264,7 @@
           }
         });
       },
-      { threshold: 0.5 },
+      { threshold: 0.5 }
     );
     langBars.forEach((el) => langIo.observe(el));
   } else {
