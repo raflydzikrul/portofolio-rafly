@@ -18,7 +18,6 @@ const PROFILE = {
     "Service Advisor",
     "Customer Service Professional",
     "Staff Administrasi & Dokumentasi",
-    "Hafidz Qur'an 10 Juz",
   ],
 
   location: "Bogor, Jawa Barat",
@@ -69,6 +68,11 @@ const PROFILE = {
       school: "STMIK Antar Bangsa",
       period: "Lulus 2024",
     },
+    {
+      degree: "D1 Sistem Informasi",
+      school: "Pesantren TIK, Depok",
+      period: "Lulus 2019",
+    },
   ],
 
   skills: [
@@ -80,7 +84,7 @@ const PROFILE = {
     "Desain Grafis (Junior)",
     "Web Development (Junior)",
     "Mentoring & Pembinaan",
-    "Hafal Al-Qur'an 10 Juz",
+    "AI Apps Fundamental",
   ],
 
   certifications: [
@@ -99,13 +103,18 @@ const PROFILE = {
       issuer: "Hendevance Training Partner (HTP)",
       year: "Tahun 2025",
     },
+    {
+      title: "Sertifikat AI Powered Apps Fundamental",
+      issuer: "WPU Course",
+      year: "Tahun 2026",
+    },
   ],
 
-  languages: [
-    { name: "Bahasa Indonesia", level: "Native", value: 100 },
-    { name: "Bahasa Arab", level: "Menengah", value: 55 },
-    { name: "Bahasa Inggris", level: "Menengah", value: 55 },
-  ],
+  // languages: [
+  //   { name: "Bahasa Indonesia", level: "Native", value: 100 },
+  //   { name: "Bahasa Arab", level: "Menengah", value: 55 },
+  //   { name: "Bahasa Inggris", level: "Menengah", value: 55 },
+  // ],
 
   // ============================================================
   // PORTOFOLIO — tambahkan karya kamu di sini (desain, dokumen,
@@ -127,7 +136,7 @@ const PROFILE = {
       title: "Sistem Absensi Kegiatan dan Kedisiplinan Siswa",
       description:
         "Sistem Absensi Kegiatan siswa dan catatan pelanggaran kedisiplinan siswa",
-      image: "assets/portfolio/sistem-absensi-kedispilinan.png",
+      image: "assets/portfolio/kedisiplinan.png",
       tags: ["Absensi", "Database", "Kedispilinan"],
       link: "https://asrama-icms.vercel.app/",
     },

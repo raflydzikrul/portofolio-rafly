@@ -117,7 +117,7 @@
     sealGrid.appendChild(card);
   });
 
-  // ---------- PORTFOLIO ----------
+  // ---------- PORTFOLIO (SLIDER) ----------
   const folioGrid = $("portfolioGrid");
   PROFILE.portfolio.forEach((item) => {
     const card = document.createElement("div");
@@ -135,6 +135,93 @@
       </div>
     `;
     folioGrid.appendChild(card);
+  });
+
+  // --- Generic slider: prev/next buttons + dots + auto show/hide ---
+  // Dipakai untuk Portofolio dan Sertifikasi (bisa dipakai ulang untuk section lain juga)
+  function initSlider({
+    grid,
+    prevBtn,
+    nextBtn,
+    dotsWrap,
+    cardSelector,
+    itemCount,
+  }) {
+    if (!grid || !prevBtn || !nextBtn || !dotsWrap) return;
+
+    function cardStep() {
+      const card = grid.querySelector(cardSelector);
+      if (!card) return 320;
+      const style = getComputedStyle(grid);
+      const gap = parseFloat(style.columnGap || style.gap || 22);
+      return card.getBoundingClientRect().width + gap;
+    }
+
+    prevBtn.addEventListener("click", () => {
+      grid.scrollBy({ left: -cardStep(), behavior: "smooth" });
+    });
+    nextBtn.addEventListener("click", () => {
+      grid.scrollBy({ left: cardStep(), behavior: "smooth" });
+    });
+
+    function updateSliderState() {
+      const maxScroll = grid.scrollWidth - grid.clientWidth - 2;
+      prevBtn.disabled = grid.scrollLeft <= 0;
+      nextBtn.disabled = grid.scrollLeft >= maxScroll;
+
+      const dots = dotsWrap.querySelectorAll(".slider-dot");
+      if (dots.length) {
+        const index = Math.round(
+          (grid.scrollLeft / Math.max(maxScroll, 1)) * (dots.length - 1),
+        );
+        dots.forEach((d, i) => d.classList.toggle("active", i === index));
+      }
+    }
+
+    // Build dots (one per item) — hanya kalau item lebih dari 1
+    if (itemCount > 1) {
+      for (let i = 0; i < itemCount; i++) {
+        const dot = document.createElement("span");
+        dot.className = "slider-dot" + (i === 0 ? " active" : "");
+        dotsWrap.appendChild(dot);
+      }
+    } else {
+      dotsWrap.style.display = "none";
+    }
+
+    grid.addEventListener("scroll", () => {
+      window.requestAnimationFrame(updateSliderState);
+    });
+    window.addEventListener("resize", () => updateSliderState());
+    setTimeout(updateSliderState, 300);
+
+    // Sembunyikan tombol panah & dots sepenuhnya kalau konten tidak overflow (tidak perlu digeser)
+    function toggleControlsVisibility() {
+      const controls = prevBtn.closest(".slider-controls");
+      const overflowing = grid.scrollWidth > grid.clientWidth + 4;
+      if (controls) controls.style.display = overflowing ? "flex" : "none";
+      dotsWrap.style.display = overflowing && itemCount > 1 ? "flex" : "none";
+    }
+    window.addEventListener("resize", toggleControlsVisibility);
+    setTimeout(toggleControlsVisibility, 300);
+  }
+
+  initSlider({
+    grid: folioGrid,
+    prevBtn: $("folioPrev"),
+    nextBtn: $("folioNext"),
+    dotsWrap: $("folioDots"),
+    cardSelector: ".folio-card",
+    itemCount: PROFILE.portfolio.length,
+  });
+
+  initSlider({
+    grid: sealGrid,
+    prevBtn: $("sealPrev"),
+    nextBtn: $("sealNext"),
+    dotsWrap: $("sealDots"),
+    cardSelector: ".seal-card",
+    itemCount: PROFILE.certifications.length,
   });
 
   // ---------- KONTAK ----------
@@ -155,7 +242,7 @@
     a.addEventListener("click", () => {
       mainNav.classList.remove("open");
       navToggle.setAttribute("aria-expanded", "false");
-    })
+    }),
   );
 
   // ---------- SCROLL REVEAL ----------
@@ -170,11 +257,10 @@
           }
         });
       },
-      { threshold: 0.15 }
+      { threshold: 0.15 },
     );
     revealEls.forEach((el) => io.observe(el));
 
-    // Animate language bars when visible
     const langBars = document.querySelectorAll(".lang-bar-fill");
     const langIo = new IntersectionObserver(
       (entries) => {
@@ -185,7 +271,7 @@
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.5 },
     );
     langBars.forEach((el) => langIo.observe(el));
   } else {
